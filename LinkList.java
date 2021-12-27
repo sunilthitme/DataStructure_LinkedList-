@@ -1,29 +1,19 @@
 package com.bridglabz.linklist;
 
+import java.util.Scanner;
+
 public class LinkList {
 
 	public static void main(String[] args) {
-		Node firstNode=new Node(56);
-		Node secNode=new Node(70);
-		Node thirdNode=new Node(30);
-		
-		Node head=firstNode;
-		firstNode.next=secNode;//add second node and next of first node=secondNode Address
-		secNode.next=thirdNode;//add third node and next of second node=third node address
-		Node temp=head;
-		while (temp!=null) {
-			System.out.print(temp.data+"->");
-			temp=temp.next;//move another node
-		}
-	}
-
-}
-class Node{
-	int data;
-	Node next;
-	public Node(int data) {
-		this.data=data;
-		this.next=null;
-	}
 	
+		 System.out.println("Welcome to the LinkedList Code !!");
+	        Scanner scanner = new Scanner(System.in);
+	        System.out.println("Press '1' to add the data at the start");
+	        switch (scanner.nextInt()) {
+	            case 1: {
+	                Operations.addDataAtStart();
+	            }
+	        }
+
+	    }
 }
